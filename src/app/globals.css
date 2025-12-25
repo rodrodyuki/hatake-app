@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9fafb;
+  --foreground: #1f2937;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-noto-sans-jp), "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 文字サイズ切替用のクラス */
+/* 小 */
+html.font-size-small {
+  font-size: 14px;
+}
+
+html.font-size-small button,
+html.font-size-small input,
+html.font-size-small textarea {
+  font-size: 14px;
+}
+
+/* 標準 */
+html.font-size-medium {
+  font-size: 16px;
+}
+
+html.font-size-medium button,
+html.font-size-medium input,
+html.font-size-medium textarea {
+  font-size: 16px;
+}
+
+/* 大（デフォルト） */
+html.font-size-large {
+  font-size: 20px;
+}
+
+html.font-size-large button,
+html.font-size-large input,
+html.font-size-large textarea {
+  font-size: 20px;
+}
+
+/* タップ可能な要素の最小サイズ確保 */
+button,
+a,
+input[type="file"],
+input[type="submit"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* フォーカス時のアウトライン強調 */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* スクロールバーのスタイル（タッチデバイス向け） */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+/* 画像の最大幅制限 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 選択時のハイライト色 */
+::selection {
+  background-color: #bbf7d0;
+  color: #166534;
+}
