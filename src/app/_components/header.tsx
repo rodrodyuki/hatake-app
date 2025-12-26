@@ -15,7 +15,7 @@ export default function Header({ onAuthorChange, showAuthorSwitcher = true }: He
   const pathname = usePathname();
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-sm">
       <div className="max-w-2xl mx-auto">
         {/* アプリタイトル */}
         <div className="flex items-center justify-between p-4 border-b">
